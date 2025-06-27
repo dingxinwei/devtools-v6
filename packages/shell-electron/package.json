@@ -32,7 +32,7 @@
     "dev:client": "webpack --watch",
     "dev:node": "webpack --watch --config webpack.node.config.js",
     "build": "npm run build:client && npm run build:node",
-    "build:client": "rimraf ./build && cross-env NODE_ENV=production webpack",
+    "build:client": "rimraf ./build && cross-env NODE_ENV=production webpack && node shell/index.js",
     "build:node": "rimraf ./build-node && cross-env NODE_ENV=production webpack --config webpack.node.config.js"
   },
   "publishConfig": {
